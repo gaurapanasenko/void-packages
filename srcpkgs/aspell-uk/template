@@ -1,0 +1,25 @@
+# Template file for 'aspell-uk'
+pkgname=aspell-uk
+version=1.4.0
+revision=1
+wrksrc="aspell6-uk-${version}-0"
+build_style=configure
+hostmakedepends="aspell-devel which"
+short_desc="Ukrainian dictionary for aspell"
+maintainer="Yehor Panasenko <yehor.panasenko@gmail.com"
+license="GPL-2.0-or-later"
+homepage="http://aspell.net/"
+distfiles="${GNU_SITE}/aspell/dict/uk/aspell6-uk-${version}-0.tar.bz2"
+checksum=35f9a7e840c1272706bc6dd172bc9625cbd843d021094da8598a6abba525f18c
+
+words-uk_package() {
+	short_desc="Ukrainian dictionary word list"
+	archs=noarch
+	pkg_install() {
+		vmkdir usr/share/dict
+		precat *.cwl |
+			iconv -f KOI8-R -t UTF-8 |
+			cut -d/ -f1 |
+			sort -u >${PKGDESTDIR}/usr/share/dict/ukrainian
+	}
+}

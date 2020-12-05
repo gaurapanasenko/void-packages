@@ -1,0 +1,1 @@
+pattern="aspell.+uk-\K[\d.]+(?=)"
