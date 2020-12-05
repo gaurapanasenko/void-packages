@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export XAUTHORITY="/home/gaura/.Xauthority"
+export DISPLAY=":0"
+exec i3lock -i /usr/share/gaura/wallpaper.png -f
