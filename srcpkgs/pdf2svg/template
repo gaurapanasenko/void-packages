@@ -1,0 +1,14 @@
+# Template file for 'pdf2svg'
+pkgname=pdf2svg
+version=0.2.3
+revision=1
+build_style=gnu-configure
+makedepends="poppler-glib-devel pkg-config cairo-devel"
+short_desc="A simple PDF to SVG converter using the Poppler and Cairo libraries."
+maintainer="Yehor Panasenko <yehor.panasenko@gmail.com>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/dawbarton/${pkgname}"
+distfiles="https://github.com/dawbarton/${pkgname}/archive/v${version}.tar.gz"
+checksum=4fb186070b3e7d33a51821e3307dce57300a062570d028feccd4e628d50dea8a
+
+#CFLAGS="-fcommon"
