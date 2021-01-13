@@ -1,0 +1,16 @@
+# Template file for 'base16-manager'
+pkgname=base16-manager
+version=1.2.1
+revision=1
+build_style=gnu-makefile
+short_desc="A command line tool to install base16 templates and set themes globally."
+maintainer="Yehor Panasenko <yehor.panasenko@gmail.com>"
+license="MIT"
+homepage="https://github.com/base16-manager/base16-manager"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum="491e7616f9a69ca82d953c377b94b8dacc5478178827a2d9ca31f624b0a189bd"
+make_install_args="PREFIX=/usr"
+
+do_patch() {
+    sed -i 's|BINDIR=${PREFIX}/local/bin|BINDIR=${PREFIX}/bin|' Makefile
+}
