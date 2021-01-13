@@ -1,0 +1,18 @@
+# Template file for 'hunspell-ua_UA'
+_lang=ua_UA
+pkgname=hunspell-${_lang}
+version=4.6.3
+revision=1
+hostmakedepends="unzip"
+short_desc="Ukrainian dictionary for hunspell"
+maintainer="Yehor Panasenko <yehor.panasenko@gmail.com>"
+license="LGPL-2.1-only"
+homepage="https://extensions.libreoffice.org/extensions/ukrainian-spelling-dictionary-and-thesaurus"
+distfiles="https://extensions.libreoffice.org/assets/downloads/z/dict-uk-ua-${version//./-}.oxt>dict-ua.zip"
+checksum=a0f0542d630fe5d45088be6428266a2d86123c460cf79265c7a23bd2fd012d93
+create_wrksrc=yes
+archs=noarch
+
+do_install() {
+	vcopy uk_UA usr/share/hunspell
+}
