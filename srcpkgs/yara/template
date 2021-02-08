@@ -1,7 +1,7 @@
 # Template file for 'yara'
 pkgname=yara
-version=4.0.2
-revision=2
+version=4.0.4
+revision=1
 build_style=gnu-configure
 configure_args="--enable-magic --enable-cuckoo"
 hostmakedepends="automake libtool pkg-config"
@@ -11,7 +11,7 @@ maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="BSD-3-Clause"
 homepage="https://virustotal.github.io/yara/"
 distfiles="https://github.com/VirusTotal/yara/archive/v${version}.tar.gz"
-checksum=05ad88eac9a9f0232432fd14516bdaeda14349d6cf0cac802d76e369abcee001
+checksum=67fdc6f1050261914cf4a9e379b60961f62c2f76af676bafb2ceb47dd642d44f
 
 pre_configure() {
 	autoreconf -fi
