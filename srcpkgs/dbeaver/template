@@ -1,16 +1,17 @@
 # Template file for 'dbeaver'
 pkgname=dbeaver
-version=7.3.2
+version=7.3.4
 revision=1
 # the build downloads binaries linked to glibc
 archs="x86_64"
 hostmakedepends="apache-maven"
+depends="openjdk11" # openjdk11 or later version, when available
 short_desc="Free Universal Database Tool"
 maintainer="Kyle Nusbaum <knusbaum+void@sdf.org>"
 license="Apache-2.0"
 homepage="https://dbeaver.io"
 distfiles="https://github.com/dbeaver/dbeaver/archive/${version}.tar.gz"
-checksum=9b37ef875771cfb34507d5423965ce1e79d263a31c245c46a89b44f01c4d9c85
+checksum=1adc7989776955d52afb5f6ff7cf4d027f2a8d7b0522ebacdaf8ece1f51db228
 nopie=true
 
 do_build() {

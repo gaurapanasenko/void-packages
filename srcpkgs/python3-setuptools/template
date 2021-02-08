@@ -1,6 +1,6 @@
 # Template file for 'python3-setuptools'
 pkgname=python3-setuptools
-version=51.1.2
+version=52.0.0
 revision=1
 wrksrc="setuptools-${version}"
 build_style=python3-module
@@ -14,8 +14,7 @@ license="MIT"
 homepage="https://github.com/pypa/setuptools"
 changelog="https://raw.githubusercontent.com/pypa/setuptools/master/CHANGES.rst"
 distfiles="${PYPI_SITE}/s/setuptools/setuptools-${version}.tar.gz"
-checksum=4fa149145ba5dcd4aaa89912ec92393a31170eaf17fe0268b1429538bad1f85a
-alternatives="setuptools:easy_install:/usr/bin/easy_install3"
+checksum=fb3a1ee622509550dbf1d419f241296169d7f09cb1eb5b1736f2f10965932b96
 provides="python3-distribute-${version}_1"
 replaces="python3-distribute>=0"
 
@@ -31,5 +30,4 @@ do_check() {
 
 post_install() {
 	vlicense LICENSE
-	mv ${PKGDESTDIR}/usr/bin/easy_install ${PKGDESTDIR}/usr/bin/easy_install3
 }
