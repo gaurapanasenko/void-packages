@@ -1,0 +1,23 @@
+# Template file for 'uld'
+pkgname=uld
+version=1.00.39
+revision=2
+short_desc="A short description max 72 chars"
+maintainer="name <email>"
+license="ELUA"
+homepage="http://ftp.hp.com"
+distfiles="http://ftp.hp.com/pub/softlib/software13/printers/SS/SL-C4010ND/uld_V${version}_01.17.tar.gz"
+checksum="0c38213b846644500526bf281caaa6e36c40b8f2241cac2f0398c97c3814540e"
+wrksrc="${pkgname}"
+#bootstrap=yes
+nopie=yes
+
+#depends="${sourcepkg}>=${version}_${revision}"
+do_install() {
+    chmod -R u+w noarch/share
+    vmkdir usr/share/ppd/cms
+    vinstall x86_64/libscmssc.so 644 usr/lib
+    vcopy noarch/share usr
+    vinstall x86_64/rastertospl 755 usr/lib/cups/filter rastertospl
+    vinstall x86_64/rastertospl 755 usr/lib/cups/filter rastertosplc
+}
