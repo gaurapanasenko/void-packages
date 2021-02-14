@@ -12,7 +12,7 @@ license="custom:Upwork"
 homepage="https://upwork.com/"
 distfiles="https://updates-desktopapp.upwork.com/binaries/v${_rawver}_${_hashver}/${pkgname}_${version}_amd64.deb
  https://upwork.pactsafe.io/versions/5ab3efef63d65b6a18aab106.pdf>LICENSE.pdf"
-checksum="ff6246b3b4a1ed79cc9bca2934652fefb40bdac4b7e95997f3a46e354ce52456
+checksum="d2bd425b8828d382e1b7fe2afee7812473ec73e81bbf83ddb4a8d2a495632189
  0949da5999c3b948bcc4165e6c55522915d9bab1790d27120eda0915aae143bb"
 repository="nonfree"
 restricted=yes
